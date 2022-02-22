@@ -12,7 +12,15 @@ const data = [
 
 const Acomplishments = () => (
   <div>
-    Acomplishments
+    <SectionTitle>Personnal Accomplishments</SectionTitle>
+    <Boxes>
+      {data.map((card, index)=>(
+        <Box key={index}>
+          <BoxNum> {card.number}</BoxNum>
+          <BoxText>{card.text}</BoxText>
+        </Box>
+      ))}
+    </Boxes>
   </div>
 );
 
